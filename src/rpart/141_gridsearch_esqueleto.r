@@ -70,7 +70,7 @@ ArbolesMontecarlo <- function(semillas, param_basicos) {
     semillas, # paso el vector de semillas, que debe ser el primer parametro de la funcion ArbolEstimarGanancia
     MoreArgs = list(param_basicos), # aqui paso el segundo parametro
     SIMPLIFY = FALSE,
-    mc.cores = 1
+    mc.cores = 5
   ) # se puede subir a 5 si posee Linux o Mac OS
 
   ganancia_promedio <- mean(unlist(ganancias))
@@ -105,18 +105,21 @@ cat(
   sep = "",
   "max_depth", "\t",
   "min_split", "\t",
+  "min_bucket", "\t",
+  "cp", "\t",
   "ganancia_promedio", "\n"
 )
 
 
 # itero por los loops anidados para cada hiperparametro
 
-for (vmax_depth in c(4, 6, 8, 10, 12, 14)){
-  for (vmin_split in c(1000, 800, 600, 400, 200, 100, 50, 20, 10))  {
-    for (vmin_bucket in c(500, 400, 300, 200, 100, 50, 20, 10, 5, 1))  {
+for (vmax_depth in c(2, 4, 5, 10, 12, 20)) {
+  for (vmin_split in c(2000, 800, 600, 400, 200, 100, 80, 60, 40))  {
+    for (vmin_bucket in c(1000, 400, 300, 200, 100, 50, 40, 30, 5, 1))  {
+      for (vcp in c(-1, 0, 0.2))  {
     # notar como se agrega
     param_basicos <- list(
-      "cp" = -0.5, # complejidad minima
+      "cp" = vcp, # complejidad minima
       "minsplit" = vmin_split, # minima cantidad de registros en un nodo para hacer el split
       "minbucket" = vmin_bucket, # minima cantidad de registros en una hoja
       "maxdepth" = vmax_depth
@@ -132,9 +135,10 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)){
       sep = "",
       vmax_depth, "\t",
       vmin_split, "\t",
+      vmin_bucket, "\t",
+      vcp, "\t",
       ganancia_promedio, "\n"
     )
   }
 }
 }
-1
