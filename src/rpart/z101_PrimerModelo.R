@@ -7,10 +7,10 @@ require("rpart")
 require("rpart.plot")
 
 # Aqui se debe poner la carpeta de la materia de SU computadora local
-setwd("X:\\gdrive\\austral2023r\\") # Establezco el Working Directory
+setwd("/home/josefinap92/") # Establezco el Working Directory
 
 # cargo el dataset
-dataset <- fread("./datasets/dataset_pequeno.csv")
+dataset <- fread("buckets/b1/datasets/dataset_pequeno.csv")
 
 dtrain <- dataset[foto_mes == 202107] # defino donde voy a entrenar
 dapply <- dataset[foto_mes == 202109] # defino donde voy a aplicar el modelo

@@ -7,10 +7,11 @@ require("rpart")
 require("rpart.plot")
 
 # Aqui se debe poner la carpeta de la materia de SU computadora local
-setwd("/Users/josefinaperez/Documents/MCD/2do cuatrimestre/Laboratorio de implementación I") # Establezco el Working Directory
+
+setwd("/home/josefinap92/") # Establezco el Working Directory
 
 # cargo el dataset
-dataset <- fread("./datasets/dataset_pequeno.csv")
+dataset <- fread("buckets/b1/datasets/dataset_pequeno.csv")
 
 dtrain <- dataset[foto_mes == 202107] # defino donde voy a entrenar
 dapply <- dataset[foto_mes == 202109] # defino donde voy a aplicar el modelo
@@ -23,7 +24,7 @@ modelo <- rpart(
         cp = -0.3, # esto significa no limitar la complejidad de los splits
         minsplit = 0, # minima cantidad de registros para que se haga el split
         minbucket = 1, # tamaño minimo de una hoja
-        maxdepth = 3
+        maxdepth = 4
 ) # profundidad maxima del arbol
 
 
