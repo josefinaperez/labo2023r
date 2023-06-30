@@ -53,9 +53,9 @@ AgregarVariables_IntraMes <- function(dataset) {
   dataset[cliente_antiguedad == 2, ctrx_quarter_normalizado := ctrx_quarter * 2]
   dataset[
     cliente_antiguedad == 3,
-    ctrx_quarter_normalizado := ctrx_quarter * 1.2
+    ctrx_quarter_normalizado := as.numeric(ctrx_quarter * 1.2)
   ]
-
+  
   # variable extraida de una tesis de maestria de Irlanda
   dataset[, mpayroll_sobre_edad := mpayroll / cliente_edad]
 
