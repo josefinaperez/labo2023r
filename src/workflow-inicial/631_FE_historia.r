@@ -497,6 +497,7 @@ if (PARAM$lag1) {
   }
   
   # agrego los delta lags de orden 2
+
   for (vcol in cols_lagueables) {
     dataset[, paste0(vcol, "_delta2") := get(paste0(vcol, "_delta1")) - shift(get(paste0(vcol, "_delta1")), 1, NA)]
   }
