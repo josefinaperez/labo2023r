@@ -17,7 +17,7 @@ require("lightgbm")
 
 # Parametros del script
 PARAM <- list()
-PARAM$experimento <- "FE6310_EXP04_00"
+PARAM$experimento <- "FE6310_EXP04_02"
 
 PARAM$exp_input <- "DR6210_EXP04"
 
@@ -44,7 +44,7 @@ PARAM$Tendencias2$ratioavg <- FALSE
 PARAM$Tendencias2$ratiomax <- FALSE
 
 
-PARAM$RandomForest$run <- FALSE
+PARAM$RandomForest$run <- TRUE
 PARAM$RandomForest$num.trees <- 20
 PARAM$RandomForest$max.depth <- 4
 PARAM$RandomForest$min.node.size <- 1000

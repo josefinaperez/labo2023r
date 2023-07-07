@@ -10,7 +10,7 @@ options(error = function() {
 # corrida de cada paso del workflow
 
 # primeros pasos, relativamente rapidos
-num_exp <- "00"
+num_exp <- "03"
 
 source("~/labo2023r/src/workflow-exp04-B/611_CA_reparar_dataset.r")
 source("~/labo2023r/src/workflow-exp04-B/621_DR_corregir_drifting.r")

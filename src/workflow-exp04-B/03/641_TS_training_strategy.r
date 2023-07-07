@@ -11,9 +11,9 @@ require("yaml")
 
 # Parametros del script
 PARAM <- list()
-PARAM$experimento <- "TS6410_EXP04_00"
+PARAM$experimento <- "TS6410_EXP04_03"
 
-PARAM$exp_input <- "FE6310_EXP04_00"
+PARAM$exp_input <- "FE6310_EXP04_03"
 
 PARAM$future <- c(202107)
 PARAM$final_train <- c(
