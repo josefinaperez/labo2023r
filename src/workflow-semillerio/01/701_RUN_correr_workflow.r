@@ -8,9 +8,9 @@ options(error = function() {
 
 
 # corrida de cada paso del workflow
-source("~/labo2023r/src/workflow-semillerio/00/711_CA_reparar_dataset.r")
-source("~/labo2023r/src/workflow-semillerio/00/721_DR_corregir_drifting.r")
-source("~/labo2023r/src/workflow-semillerio/00/731_FE_historia.r")
-source("~/labo2023r/src/workflow-semillerio/00/741_TS_training_strategy.r")
-source("~/labo2023r/src/workflow-semillerio/00/751_HT_lightgbm.r")
-source("~/labo2023r/src/workflow-semillerio/00/771_ZZ_final_semillerio.r")
+source("~/labo2023r/src/workflow-semillerio/01/711_CA_reparar_dataset.r")
+source("~/labo2023r/src/workflow-semillerio/01/721_DR_corregir_drifting.r")
+source("~/labo2023r/src/workflow-semillerio/01/731_FE_historia.r")
+source("~/labo2023r/src/workflow-semillerio/01/741_TS_training_strategy.r")
+source("~/labo2023r/src/workflow-semillerio/01/751_HT_lightgbm.r")
+source("~/labo2023r/src/workflow-semillerio/01/771_ZZ_final_semillerio.r")
