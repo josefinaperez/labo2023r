@@ -285,7 +285,7 @@ switch(PARAM$metodo,
   "ninguno"        = cat("No hay correccion del data drifting"),
   "rank_simple"    = drift_rank_simple(campos_monetarios),
   "rank_cero_fijo" = drift_rank_cero_fijo(campos_monetarios),
-  "deflacion"      = drift_deflacion(campos_monetarios)
+  "deflacion"      = drift_deflacion(campos_monetarios),
   "normaliza"      = drift_normaliza(campos_monetarios)
 )
 
