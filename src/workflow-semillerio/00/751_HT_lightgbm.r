@@ -80,7 +80,7 @@ PARAM$bo_lgb <- makeParamSet(
   makeIntegerParam("min_data_in_leaf", lower = 100L, upper = 50000L),
   makeNumericParam("lambda_l1", lower = 0.01, upper = 1.0),
   makeNumericParam("lambda_l2", lower = 0.01, upper = 1.0),
-  makeNumericParam("min_gain_to_split", lower = 0.01, upper = 1.0),
+  makeNumericParam("min_gain_to_split", lower = 0.01, upper = 1.0)
 )
 
 
