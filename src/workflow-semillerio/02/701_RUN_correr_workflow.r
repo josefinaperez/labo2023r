@@ -16,4 +16,4 @@ source("~/labo2023r/src/workflow-semillerio/00/751_HT_lightgbm.r")
 
 
 ### solo corro este con diferente ranking
-source("~/labo2023r/src/workflow-semillerio/00/771_ZZ_final_semillerio.r")
+source("~/labo2023r/src/workflow-semillerio/02/771_ZZ_final_semillerio.r")
