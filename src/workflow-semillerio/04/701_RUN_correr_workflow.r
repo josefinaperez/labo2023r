@@ -13,7 +13,7 @@ source("~/labo2023r/src/workflow-semillerio/04/721_DR_corregir_drifting.r")
 
 
 
-### toma DR del 0
+### toma DR del 00
 source("~/labo2023r/src/workflow-semillerio/04/731_FE_historia.r")
 source("~/labo2023r/src/workflow-semillerio/04/741_TS_training_strategy.r")
 source("~/labo2023r/src/workflow-semillerio/04/751_HT_lightgbm.r")
